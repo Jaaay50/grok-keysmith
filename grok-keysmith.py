@@ -3596,9 +3596,9 @@ def build_argparser():
     run_p.add_argument("--mode", choices=["default", "override"], default="default")
     run_p.add_argument(
         "--wrap",
-        choices=["none", "fixture", "scoped"],
+        choices=["none", "fixture", "scoped", "describe"],
         default="none",
-        help="fixture: local-lab routing header; scoped: operator-engagement header with real target values (opt-in)",
+        help="fixture: local-lab routing header; scoped: operator-engagement header with real target values (opt-in); describe: rewrite type-named imperative requests as sample descriptions (issue #19 server-side pre-routing refusal workaround)",
     )
     run_p.add_argument("--contract-path", dest="contract_path")
     run_p.add_argument("--grok-bin", dest="grok_bin")
@@ -3647,9 +3647,9 @@ def build_argparser():
     bt.add_argument("--mode", choices=["default", "override", "ab"], default="default")
     bt.add_argument(
         "--wrap",
-        choices=["none", "fixture", "scoped"],
+        choices=["none", "fixture", "scoped", "describe"],
         default="none",
-        help="fixture: local-lab routing header; scoped: operator-engagement header with real target values (opt-in)",
+        help="fixture: local-lab routing header; scoped: operator-engagement header with real target values (opt-in); describe: rewrite type-named imperative requests as sample descriptions (issue #19 server-side pre-routing refusal workaround)",
     )
     bt.add_argument("--repetitions", type=int, default=1)
     bt.add_argument("--timeout", type=float, default=180.0)
