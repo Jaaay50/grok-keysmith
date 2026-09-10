@@ -41,7 +41,7 @@ The Keysmith series **deploys, verifies, and revokes** custom instructions for l
 
 ### Install options
 
-1. **Conservative: stable CLI.** Use the complete ZIP / Tarball from the [latest stable Release](https://github.com/Jia-Ethan/grok-keysmith/releases/latest) (currently `v0.5.2`), or check out the same tag. `run` and `breaktest` require sibling modules, so do not download only `grok-keysmith.py` or install from floating `main`.
+1. **Conservative: stable CLI.** Use the complete ZIP / Tarball from the [latest stable Release](https://github.com/Jia-Ethan/grok-keysmith/releases/latest) (currently `v0.6.0`), or check out the same tag. `run` and `breaktest` require sibling modules, so do not download only `grok-keysmith.py` or install from floating `main`.
 2. **Easier: unsigned Desktop Beta.** The current public build is [desktop-v0.1.0-beta.4](https://github.com/Jia-Ethan/grok-keysmith/releases/tag/desktop-v0.1.0-beta.4) with the stable `0.5.0` CLI sidecar. It is a public GitHub Pre-release (not the stable Latest release); there is no developer signing, auto-update, or Linux GUI.
 
 ### Quick start
@@ -49,11 +49,11 @@ The Keysmith series **deploys, verifies, and revokes** custom instructions for l
 **Release ZIP (recommended):**
 
 ```bash
-curl -LO https://github.com/Jia-Ethan/grok-keysmith/releases/download/v0.5.2/grok-keysmith-v0.5.2.zip
-curl -LO https://github.com/Jia-Ethan/grok-keysmith/releases/download/v0.5.2/SHA256SUMS
-grep ' grok-keysmith-v0.5.2.zip$' SHA256SUMS | shasum -a 256 -c -
-unzip grok-keysmith-v0.5.2.zip
-cd grok-keysmith-v0.5.2
+curl -LO https://github.com/Jia-Ethan/grok-keysmith/releases/download/v0.6.0/grok-keysmith-v0.6.0.zip
+curl -LO https://github.com/Jia-Ethan/grok-keysmith/releases/download/v0.6.0/SHA256SUMS
+grep ' grok-keysmith-v0.6.0.zip$' SHA256SUMS | shasum -a 256 -c -
+unzip grok-keysmith-v0.6.0.zip
+cd grok-keysmith-v0.6.0
 python3 grok-keysmith.py --version
 python3 grok-keysmith.py --status
 python3 grok-keysmith.py --dry-run
@@ -64,7 +64,7 @@ python3 grok-keysmith.py --yes
 **Pinned source tag:**
 
 ```bash
-git clone --branch v0.5.2 --depth 1 https://github.com/Jia-Ethan/grok-keysmith.git
+git clone --branch v0.6.0 --depth 1 https://github.com/Jia-Ethan/grok-keysmith.git
 cd grok-keysmith
 python3 grok-keysmith.py --version
 python3 grok-keysmith.py --status
@@ -101,7 +101,7 @@ If a formatter or settings UI rewrote `config.toml` but the three `[compat.*]` t
 
 - CLI CI covers macOS / Linux / Windows; Python 3.8+. Windows `override` / `ab` need a native `grok.exe`.
 - Desktop: macOS Apple Silicon and Windows x64 only; unsigned.
-- Versions and assets live on [Releases](https://github.com/Jia-Ethan/grok-keysmith/releases). `v0.5.2` provides `--json`, `--grok-dir`, `run`, `breaktest`, and `--reconcile`.
+- Versions and assets live on [Releases](https://github.com/Jia-Ethan/grok-keysmith/releases). `v0.6.0` provides `--json`, `--grok-dir`, `run`, `breaktest`, and `--reconcile`.
 - Development adds `run --session-script DIR`: feeds `turn1.txt`..`turnN.txt` into one multi-turn Grok session in field order (the six-field ZERODAY structure); see the Session Script section in [`docs/reference.md`](docs/reference.md).
 
 ### Advanced docs
